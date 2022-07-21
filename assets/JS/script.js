@@ -2,11 +2,15 @@
 var generateBtn = document.querySelector('#generate');
 
 function generatePassword() {
-  var password = 'password';
-  // TODO: add code to generate the password here
-
-  return password;
+  var length = 8,
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+      retVal = "";
+  for (var i = 0, n = charset.length; i < length; ++i) {
+      retVal += charset.charAt(Math.floor(Math.random() * n));
+  }
+  return retVal;
 }
+
 
 // Write password to the #password input
 function writePassword() {
@@ -20,12 +24,4 @@ function writePassword() {
 generateBtn.addEventListener('click', writePassword);
 
 
-function generatePassword() {
-  var length = 8,
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-      retVal = "";
-  for (var i = 0, n = charset.length; i < length; ++i) {
-      retVal += charset.charAt(Math.floor(Math.random() * n));
-  }
-  return retVal;
-}
+
