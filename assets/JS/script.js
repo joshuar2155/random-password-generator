@@ -1,5 +1,25 @@
 // Assignment Code
+
 var generateBtn = document.querySelector('#generate');
+
+
+var playGame = function() {
+  // Ask user for their choice
+  var userChoice = window.prompt("Enter R, P, or S:");
+
+  // If user pressed Cancel, immediately end function
+  if (!userChoice) {
+    return;
+  }
+
+  // Convert to uppercase to make comparisons easier
+  userChoice = userChoice.toUpperCase();
+
+  // Get random index from array of options
+  var index = Math.floor(Math.random() * options.length);
+  var computerChoice = options[index];
+}
+
 
 function generatePassword() {
   var length = 8,
