@@ -22,15 +22,104 @@ var playGame = function() {
 
 
 function generatePassword() {
-  var length = 8,
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-      retVal = "";
-  for (var i = 0, n = charset.length; i < length; ++i) {
-      retVal += charset.charAt(Math.floor(Math.random() * n));
-  }
-  return retVal;
-}
+  var password = "password";
+  var passLength = 0;
+  var useUpper = true;
+  var useLower = true;
+  var useSpecial = true;
+  var useNumber = true;
+  var lowerChars = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  var upperChars = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  var numChars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var specChars = ["!", "#", "$", "%", "&", "*", "'"];
+  var choices = [];
 
+  // TODO: add code to generate the password here
+
+  passLength = prompt(
+    "how many characters would you like your password to be? Can be 8-128 chars"
+  );
+  useUpper = confirm(
+    "Would you like your password to contain uppercase letters?"
+  );
+  useLower = confirm(
+    "Would you like your password to contain lowercase letters?"
+  );
+  useSpecial = confirm(
+    "Would you like your password to contain special characters?"
+  );
+  useNumber = confirm("Would you like your password to contain numbers?");
+
+  if (useUpper === true) {
+    choices = choices.concat(upperChars);
+  }
+
+  if (useLower === true) {
+    choices= choices.concat(lowerChars);
+  }
+
+  if (useNumber === true) {
+    choices = choices.concat(numChars);
+  }
+
+  if (useSpecial === true) {
+    choices = choices.concat(specChars);
+  }
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -42,6 +131,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-
-
