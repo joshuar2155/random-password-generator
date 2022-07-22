@@ -2,7 +2,10 @@
 
 var generateBtn = document.querySelector('#generate');
 
+//Password function
+
 function generatePassword() {
+  //Variables for generator
   var password = "password";
   var lowercase = true;
   var uppercase = true;
@@ -14,6 +17,8 @@ function generatePassword() {
   var numbers = [0,1,2,3,4,5,6,7,8,9];
   var passwordnumbers = [8-128];
 
+  //Prompts and Commands for specifications
+
   passwordnumbers = window.prompt("How long would you like your password?");
 
   lowercase = window.confirm("Do you want your password to have lower case letters?")
@@ -24,10 +29,26 @@ function generatePassword() {
 
   special = window.confirm("Do you want your password to have special characters?")
 
+  //If circumstances for selections
+
   if (lowercase === true) {
-    
+
   }
 
+  if (uppercase === true) {
+
+  }
+
+  if (numbers === true) {
+
+  }
+
+  if (special === true) {
+
+  
+  }
+  
+  return;
 
 }
 
