@@ -2,25 +2,6 @@
 
 var generateBtn = document.querySelector('#generate');
 
-
-var playGame = function() {
-  // Ask user for their choice
-  var userChoice = window.prompt("Enter R, P, or S:");
-
-  // If user pressed Cancel, immediately end function
-  if (!userChoice) {
-    return;
-  }
-
-  // Convert to uppercase to make comparisons easier
-  userChoice = userChoice.toUpperCase();
-
-  // Get random index from array of options
-  var index = Math.floor(Math.random() * options.length);
-  var computerChoice = options[index];
-}
-
-
 function generatePassword() {
   var password = "password";
   var lowercase = true;
@@ -34,6 +15,20 @@ function generatePassword() {
   var passwordnumbers = [8-128];
 
   passwordnumbers = window.prompt("How long would you like your password?");
+
+  lowercase = window.confirm("Do you want your password to have lower case letters?")
+
+  uppercase = window.confirm("Do you want your password to have upper case letters?")
+
+  numbers = window.confirm("Do you want your password to have numbers?")
+
+  special = window.confirm("Do you want your password to have special characters?")
+
+  if (lowercase === true) {
+    
+  }
+
+
 }
 
 
