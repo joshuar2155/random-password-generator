@@ -21,13 +21,13 @@ function generatePassword() {
 
   passwordnumbers = window.prompt("How long would you like your password?");
 
-  lowercase = window.confirm("Do you want your password to have lower case letters?")
+  lowercase = window.confirm("Do you want your password to have lower case letters?");
 
-  uppercase = window.confirm("Do you want your password to have upper case letters?")
+  uppercase = window.confirm("Do you want your password to have upper case letters?");
 
-  numbers = window.confirm("Do you want your password to have numbers?")
+  numbers = window.confirm("Do you want your password to have numbers?");
 
-  special = window.confirm("Do you want your password to have special characters?")
+  special = window.confirm("Do you want your password to have special characters?");
 
   //If circumstances for selections
 
@@ -45,9 +45,8 @@ function generatePassword() {
 
   if (special === true) {
 
-  
   }
-  
+
   return;
 
 }
